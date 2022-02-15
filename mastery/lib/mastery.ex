@@ -26,11 +26,11 @@ defmodule Mastery do
     end
   end
 
-  def select_question(session) do
-    GenServer.call(session, :select_question)
+  def select_question(name) do
+    QuizSession.select_question(name)
   end
 
-  def answer_question(session, answer) do
-    GenServer.call(session, {:answer_question, answer})
+  def answer_question(name, answer) do
+    QuizSession.answer_question(name, answer)
   end
 end

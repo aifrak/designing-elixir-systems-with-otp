@@ -28,3 +28,10 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env()}.exs"
+
+config :mastery_persistence,
+  ecto_repos: [MasteryPersistence.Repo]
+
+config :logger, level: :info
+
+import_config "#{Mix.env()}.exs"
